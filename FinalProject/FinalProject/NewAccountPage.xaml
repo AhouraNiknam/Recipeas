@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.NewAccountPage">
+    <ScrollView>
+        <StackLayout
+                Spacing="3"
+                BackgroundColor="BlanchedAlmond">
+                <Frame
+                    BackgroundColor="White"
+                    Margin="10,10,10,10"
+                    HasShadow="true">
+                    <StackLayout>
+                        <Entry
+                            x:Name="Name_Entry"
+                            Placeholder="Name"
+                            HeightRequest="50"
+                            FontSize="20"
+                            Margin="10,0,10,0"
+                            Keyboard="Default"/>
+                    <Entry
+                            x:Name="Username_Entry"
+                            Placeholder="Username"
+                            HeightRequest="50"
+                            FontSize="20"
+                            Margin="10,10,10,0"
+                            Keyboard="Default"/>
+                    <Entry
+                            x:Name="Email_Entry"
+                            Placeholder="Email"
+                            HeightRequest="50"
+                            FontSize="20"
+                            Margin="10,10,10,0"
+                            Keyboard="Email"/>
+                        <Entry
+                            x:Name="Password_Entry"
+                            Placeholder="Create Password"
+                            HeightRequest="50"
+                            FontSize="20"
+                            Margin="10,10,10,0"
+                            IsPassword="true"
+                            Keyboard="Default"/>
+                        <Entry
+                            x:Name="ReEnterPassword_Entry"
+                            Placeholder="Re-enter Password"
+                            HeightRequest="50"
+                            FontSize="20"
+                            Margin="10,10,10,0"
+                            IsPassword="true"
+                            Keyboard="Default"/>
+                        <Button
+                            Text="Create Account"
+                            Margin="10,15,10,0"
+                            HeightRequest="50"
+                            FontSize="15"
+                            TextColor="White"
+                            BackgroundColor="Orange"
+                            Clicked="CreateAccount"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+    </ScrollView>
+</ContentPage>

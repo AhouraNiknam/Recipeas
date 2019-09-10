@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.SearchTab"
+             Title="Food">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout"
+                     Clicked="Logout_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout
+            BackgroundColor="BlanchedAlmond">
+            <SearchBar x:Name="RecipeSearchBar"
+                       SearchButtonPressed="RecipeSearchBar_SearchButtonPressed"
+                       TextChanged="RecipeSearchBar_TextChanged"/>
+            <!--<ListView x:Name="SuggestionsListView"
+                      ItemTapped="SuggestionsListView_ItemTapped"/>-->
+            <!--</StackLayout>-->
+
+            <!--<StackLayout>-->
+            <ActivityIndicator
+                x:Name="actInd"
+                IsRunning="false"
+                IsVisible="False"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Color="Red"/>
+            <ListView
+                x:Name="recipeListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem
+                                    Text="Get Recipe"
+                                    Clicked="Handle_Clicked"
+                                    IsDestructive="True"
+                                    CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                            <ViewCell.View>
+                                <Label
+                                    Text="{Binding title}"/>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

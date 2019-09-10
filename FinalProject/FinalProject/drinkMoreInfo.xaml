@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.drinkMoreInfo">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                HorizontalOptions="StartAndExpand"
+                BackgroundColor="BlanchedAlmond">
+                <Label x:Name="drinkNameLabel"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       TextColor="Black">
+                </Label>
+                <Image
+                    x:Name="drinkimg"/>
+                <!--VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"/>-->
+                <Label x:Name="drinkLabel"
+                       TextColor="Black"></Label>
+                <Label x:Name="ingredientLabel"
+                       TextColor="Black"></Label>
+                <ListView
+                    x:Name="drinkList">
+                    <ListView.ItemTemplate>
+                    <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout
+                                        Orientation="Horizontal">
+                                        <Label Text="{Binding Name}"
+                                               TextColor="Gray"/>
+                                        <Label Text="{Binding Amount}"
+                                               TextColor="Gray"/>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Label x:Name="dateModLabel"></Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
